@@ -1,8 +1,24 @@
 # AICHILDEDU
 
+<div align="center">
+  <a href="https://aichildedu.xyz/">
+    <img src="https://github.com/CHILDEDUAI/aichildedu/blob/main/assets/logo.jpg" style="margin: 15px; max-width: 300px" width="30%" alt="Logo">
+  </a>
+</div>
+
 A microservice-based AI education platform for children that integrates LLMs, image generation, and speech synthesis to provide personalized storybook creation, intelligent conversational learning, and multimedia content generation.
 
-[![License: MIT](https://img.shields.io/badge/License-Apache-blue.svg)](https://opensource.org/license/apache-2-0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](README.md)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![React](https://img.shields.io/badge/react-18%2B-blue)](https://react.dev/)
+[![FastAPI](https://img.shields.io/badge/fastapi-0.110.0-blue)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/docker-24.0.5-blue)](https://www.docker.com/)
+[![PostgreSQL](https://img.shields.io/badge/postgresql-16.1-blue)](https://www.postgresql.org/)
+[![MongoDB](https://img.shields.io/badge/mongodb-6.0-blue)](https://www.mongodb.com/)
+[![Redis](https://img.shields.io/badge/redis-7.4-blue)](https://redis.io/)
+[![Elasticsearch](https://img.shields.io/badge/elasticsearch-9.1-blue)](https://www.elastic.co/elasticsearch/)
+
 
 ## Overview
 
