@@ -1,0 +1,259 @@
+version: '3.8'
+
+services:
+  # API Gateway
+  api_gateway:
+    build: ./api_gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - SERVICE_USER=http://user_service:8001/api/v1
+      - SERVICE_CONTENT=http://content_service:8002/api/v1
+      - SERVICE_LEARNING=http://learning_service:8003/api/v1
+      - SERVICE_AI_TEXT=http://text_generator:8010/api/v1
+      - SERVICE_AI_IMAGE=http://image_generator:8011/api/v1
+      - SERVICE_AI_VOICE=http://voice_generator:8012/api/v1
+      - SERVICE_AI_VIDEO=http://video_generator:8013/api/v1
+      - SERVICE_RECOMMENDATION=http://recommendation_service:8020/api/v1
+      - SERVICE_ANALYTICS=http://analytics_service:8030/api/v1
+    depends_on:
+      - user_service
+      - content_service
+      - learning_service
+    networks:
+      - aiedu_network
+    volumes:
+      - ./api_gateway:/app
+
+  # User Service
+  user_service:
+    build: ./user_service
+    ports:
+      - "8001:8001"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/aiedu_users
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=your_secret_key_here
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - aiedu_network
+    volumes:
+      - ./user_service:/app
+
+  # Content Service
+  content_service:
+    build: ./content_service
+    ports:
+      - "8002:8002"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_content
+      - ELASTICSEARCH_URI=http://elasticsearch:9200
+    depends_on:
+      - mongodb
+      - elasticsearch
+    networks:
+      - aiedu_network
+    volumes:
+      - ./content_service:/app
+
+  # Learning Service
+  learning_service:
+    build: ./learning_service
+    ports:
+      - "8003:8003"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/aiedu_learning
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_learning
+    depends_on:
+      - postgres
+      - mongodb
+    networks:
+      - aiedu_network
+    volumes:
+      - ./learning_service:/app
+
+  # AI Service - Text Generator
+  text_generator:
+    build: ./ai_service/text_generator
+    ports:
+      - "8010:8010"
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key_here
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_ai
+    depends_on:
+      - mongodb
+    networks:
+      - aiedu_network
+    volumes:
+      - ./ai_service/text_generator:/app
+
+  # AI Service - Image Generator
+  image_generator:
+    build: ./ai_service/image_generator
+    ports:
+      - "8011:8011"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_ai
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    depends_on:
+      - mongodb
+      - minio
+    networks:
+      - aiedu_network
+    volumes:
+      - ./ai_service/image_generator:/app
+
+  # AI Service - Voice Generator
+  voice_generator:
+    build: ./ai_service/voice_generator
+    ports:
+      - "8012:8012"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_ai
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    depends_on:
+      - mongodb
+      - minio
+    networks:
+      - aiedu_network
+    volumes:
+      - ./ai_service/voice_generator:/app
+
+  # AI Service - Video Generator
+  video_generator:
+    build: ./ai_service/video_generator
+    ports:
+      - "8013:8013"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_ai
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    depends_on:
+      - mongodb
+      - minio
+    networks:
+      - aiedu_network
+    volumes:
+      - ./ai_service/video_generator:/app
+
+  # Recommendation Service
+  recommendation_service:
+    build: ./recommendation_service
+    ports:
+      - "8020:8020"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_recommendations
+      - REDIS_URL=redis://redis:6379/1
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - aiedu_network
+    volumes:
+      - ./recommendation_service:/app
+
+  # Analytics Service
+  analytics_service:
+    build: ./analytics_service
+    ports:
+      - "8030:8030"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/
+      - MONGODB_DB=aiedu_analytics
+      - POSTGRES_URL=postgresql://postgres:postgres@postgres:5432/aiedu_analytics
+    depends_on:
+      - mongodb
+      - postgres
+    networks:
+      - aiedu_network
+    volumes:
+      - ./analytics_service:/app
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15.3
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_MULTIPLE_DATABASES=aiedu_users,aiedu_learning,aiedu_analytics
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - aiedu_network
+    ports:
+      - "5432:5432"
+
+  # MongoDB
+  mongodb:
+    image: mongo:6.0
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - aiedu_network
+    ports:
+      - "27017:27017"
+
+  # Redis
+  redis:
+    image: redis:7.0
+    volumes:
+      - redis_data:/data
+    networks:
+      - aiedu_network
+    ports:
+      - "6379:6379"
+
+  # Elasticsearch
+  elasticsearch:
+    image: elasticsearch:8.8.1
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - aiedu_network
+    ports:
+      - "9200:9200"
+
+  # MinIO (Object Storage)
+  minio:
+    image: minio/minio
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - minio_data:/data
+    networks:
+      - aiedu_network
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+networks:
+  aiedu_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  mongodb_data:
+  redis_data:
+  elasticsearch_data:
+  minio_data: 
