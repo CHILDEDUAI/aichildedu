@@ -1,44 +1,55 @@
 # Core Framework
-fastapi==0.98.0
-uvicorn==0.22.0
-pydantic==1.10.8
-starlette==0.27.0
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==1.10.13
+starlette==0.36.3
 
 # Database
-sqlalchemy==2.0.15
-psycopg2-binary==2.9.6
-pymongo==4.4.0
-motor==3.2.0
-redis==4.5.5
-prisma==0.8.2
+sqlalchemy==2.0.27
+psycopg2-binary==2.9.9
+pymongo==4.6.1
+motor==3.3.2
+redis==5.0.1
+prisma==0.10.0
 
 # Authentication and Security
 python-jose==3.3.0
 passlib==1.7.4
-python-multipart==0.0.6
+python-multipart==0.0.7
 bcrypt==4.0.1
 
 # AI and ML
-langchain==0.0.225
-openai==0.27.8
-tensorflow==2.12.0
-torch==2.0.1
-transformers==4.30.2
-pillow==9.5.0
-opencv-python==4.7.0.72
+langchain==0.1.1
+langchain-openai==0.0.5
+langchain-core==0.1.3
+langchain-community==0.0.12
+openai==1.10.0
+tensorflow==2.15.0
+torch==2.1.2
+transformers==4.35.2
+pillow==10.1.0
+opencv-python==4.8.1.78
 ffmpeg-python==0.2.0
 
 # Utils
 python-dotenv==1.0.0
 requests==2.31.0
-httpx==0.24.1
-pydantic[email]==1.10.8
-tenacity==8.2.2
-pytest==7.3.1
-black==23.3.0
-isort==5.12.0
-mypy==1.3.0
+httpx==0.25.2
+pydantic[email]==1.10.13
+tenacity==8.2.3
+pytest==7.4.3
+black==23.12.1
+isort==5.13.2
+mypy==1.8.0
+bson==0.5.10
+
+# Storage
+minio==7.2.0
+boto3==1.34.7
+
+# Search
+elasticsearch==8.11.1
 
 # Distributed Systems
 kafka-python==2.0.2
-celery==5.3.1 
+celery==5.3.6 

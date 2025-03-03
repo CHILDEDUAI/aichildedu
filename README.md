@@ -9,7 +9,6 @@
 A microservice-based AI education platform for children that integrates LLMs, image generation, and speech synthesis to provide personalized storybook creation, intelligent conversational learning, and multimedia content generation.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](README.md)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![React](https://img.shields.io/badge/react-18%2B-blue)](https://react.dev/)
 [![FastAPI](https://img.shields.io/badge/fastapi-0.110.0-blue)](https://fastapi.tiangolo.com/)
