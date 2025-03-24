@@ -39,11 +39,11 @@ AICHILDEDU is an innovative educational platform designed specifically for child
 AICHILDEDU follows a microservice architecture with the following key components:
 
 ```
-┌─────────────────┐
-│   API Gateway   │
-└────────┬────────┘
-         │
-┌────────┼────────┬────────────────┬────────────────┬────────────────┐
+                           ┌─────────────────┐
+                           │   API Gateway   │
+                           └───────┬─────────┘
+                                   │
+┌────────┬────────┬────────────────┼────────────────┬────────────────┐
 │        │        │                │                │                │
 ▼        ▼        ▼                ▼                ▼                ▼
 ┌──────────┐ ┌─────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
