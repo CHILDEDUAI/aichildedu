@@ -218,7 +218,39 @@ Handles user management, authentication, and authorization. Manages user profile
 
 ### Content Service
 
-Manages educational content, including stories, quizzes, and multimedia materials.
+Manages educational content creation, storage, retrieval, and organization with the following features:
+
+- **Content Types Management**:
+  - **Stories**: Interactive educational narratives with character development, themes, and moral lessons
+  - **Quizzes**: Customizable question sets with answers, difficulty levels, and scoring mechanisms
+  - **Lessons**: Structured learning materials with educational objectives and prerequisites
+
+- **Content Organization**:
+  - **Categories**: Hierarchical organization of content with parent-child relationships 
+  - **Tags**: Flexible content labeling for improved discoverability and filtering
+  - **Collections**: User-created or curated sets of content (custom, curriculum, featured)
+
+- **Content Filtering and Search**:
+  - Age-appropriate filtering based on min/max age ranges
+  - Difficulty level filtering (beginner, intermediate, advanced)
+  - Content rating filtering (G, PG, educational)
+  - Multi-language support
+  - Full-text search capabilities
+
+- **Content Metadata**:
+  - Educational value tracking
+  - Subjects and themes classification
+  - Reading time estimation
+  - Word count metrics
+
+- **User Interaction**:
+  - Content reactions (like, favorite, helpful)
+  - Content sharing and permissions
+  - User-specific content collections
+
+- **Multimedia Asset Management**:
+  - Storage and retrieval of images, audio, and video assets
+  - Asset association with educational content
 
 ### Learning Service
 
