@@ -5,8 +5,8 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from aichildedu.common.config import settings
-from aichildedu.common.exceptions import APIError
+from common.config import settings
+from common.exceptions import APIError
 
 from .routes import router
 

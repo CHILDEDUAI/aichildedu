@@ -8,7 +8,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from aichildedu.common.database import get_db_session
+from common.database import get_db_session
 from .. import crud, schemas
 from ..dependencies import get_current_user, get_optional_user
 

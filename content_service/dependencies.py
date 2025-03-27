@@ -8,7 +8,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 
-from aichildedu.common.config import settings
+from common.config import settings
 
 # OAuth2 scheme for token authentication
 oauth2_scheme = OAuth2PasswordBearer(

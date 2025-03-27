@@ -6,8 +6,8 @@ from fastapi import FastAPI, Request, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.types import ASGIApp
 
-from aichildedu.common.config import settings
-from aichildedu.common.exceptions import APIError
+from common.config import settings
+from common.exceptions import APIError
 
 logger = logging.getLogger("api_gateway.middleware")
 

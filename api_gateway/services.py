@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional
 import httpx
 from fastapi import HTTPException, status
 
-from aichildedu.common.config import settings
+from common.config import settings
 
 logger = logging.getLogger("api_gateway.services")
 

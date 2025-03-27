@@ -3,8 +3,8 @@ from typing import Dict, List, Optional, Union
 from fastapi import APIRouter, Depends, HTTPException, Path, Query
 from fastapi.responses import JSONResponse
 
-from aichildedu.common.auth import get_current_user_id, get_optional_user_id
-from aichildedu.common.exceptions import ErrorResponse
+from common.auth import get_current_user_id, get_optional_user_id
+from common.exceptions import ErrorResponse
 
 from .db import db
 from .generator import generator

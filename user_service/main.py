@@ -6,8 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from sqlalchemy import create_engine
 
-from aichildedu.common.config import settings
-from aichildedu.common.database import Base, get_postgres_engine
+from common.config import settings
+from common.database import Base, get_postgres_engine
 
 from . import models, router
 

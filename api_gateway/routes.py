@@ -6,8 +6,8 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.security import OAuth2PasswordBearer
 
-from aichildedu.common.auth import get_current_user_id, get_optional_user_id
-from aichildedu.common.config import settings
+from common.auth import get_current_user_id, get_optional_user_id
+from common.config import settings
 
 logger = logging.getLogger("api_gateway.routes")
 

@@ -4,8 +4,8 @@ from typing import Dict, List, Optional, Union
 import motor.motor_asyncio
 from bson import ObjectId
 
-from aichildedu.common.config import settings
-from aichildedu.common.utils import generate_uuid
+from common.config import settings
+from common.utils import generate_uuid
 
 from .models import StoryTemplate, TaskStatus, TextGenerationTask
 

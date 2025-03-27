@@ -4,7 +4,7 @@ from uuid import UUID
 
 from sqlalchemy.orm import Session
 
-from aichildedu.common.security import get_password_hash, verify_password
+from common.security import get_password_hash, verify_password
 
 from . import models, schemas
 

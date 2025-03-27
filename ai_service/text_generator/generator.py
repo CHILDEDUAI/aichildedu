@@ -9,8 +9,8 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
-from aichildedu.common.config import settings
-from aichildedu.common.utils import generate_uuid
+from common.config import settings
+from common.utils import generate_uuid
 
 from .db import db
 from .models import QuizContent, StoryContent, TaskStatus

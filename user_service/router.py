@@ -4,7 +4,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 from sqlalchemy.orm import Session
 
-from aichildedu.common.database import get_db_session
+from common.database import get_db_session
 
 from . import auth, crud, models, schemas
 

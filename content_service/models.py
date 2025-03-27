@@ -8,7 +8,7 @@ from sqlalchemy.dialects.postgresql import ARRAY, JSONB, UUID
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from aichildedu.common.database import Base
+from common.database import Base
 
 # Content categories association table
 content_categories = Table(

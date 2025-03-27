@@ -8,8 +8,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer
 
-from aichildedu.common.config import settings
-from aichildedu.common.exceptions import APIError
+from common.config import settings
+from common.exceptions import APIError
 
 from .middleware import (
     LoggingMiddleware,

@@ -7,8 +7,8 @@ from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
 
-from aichildedu.common.config import settings
-from aichildedu.common.security import (create_access_token, get_password_hash,
+from common.config import settings
+from common.security import (create_access_token, get_password_hash,
                                       verify_password)
 
 from . import crud, models, schemas
