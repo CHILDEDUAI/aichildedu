@@ -72,7 +72,7 @@ AICHILDEDU follows a microservice architecture with the following key components
 
 - **Backend**: Python, FastAPI, Uvicorn
 - **Databases**: PostgreSQL, MongoDB, Redis
-- **AI & ML**: LangChain, OpenAI GPT models, TensorFlow, PyTorch, Transformers
+- **AI & ML**: LangChain, AIEDU GPT models, TensorFlow, PyTorch, Transformers
 - **Storage**: MinIO (Object Storage)
 - **Search**: Elasticsearch
 - **Containerization**: Docker, Docker Compose
@@ -84,7 +84,6 @@ AICHILDEDU follows a microservice architecture with the following key components
 
 - Docker and Docker Compose
 - Python 3.10 or higher (for local development)
-- OpenAI API key
 
 ### Installation
 
@@ -104,9 +103,6 @@ AICHILDEDU follows a microservice architecture with the following key components
    
    # Authentication
    SECRET_KEY=your_secret_key_change_in_production
-   
-   # OpenAI
-   OPENAI_API_KEY=your_openai_api_key
    ```
 
 3. Start the services using Docker Compose:
@@ -344,10 +340,3 @@ This project follows PEP 8 style guidelines. Please ensure your code adheres to 
 ## License
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
-
-## Acknowledgments
-
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [LangChain](https://github.com/hwchase17/langchain)
-- [OpenAI](https://openai.com/)
-- All contributors to the open-source libraries used in this project
