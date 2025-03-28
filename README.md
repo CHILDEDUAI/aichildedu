@@ -12,6 +12,12 @@ We believe in using AI to enhance, not replace, human interaction and creativity
 
 We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overcome globalization barriers in EdTech and incentivize children's engagement in education. Through a unified $AIEDU, global users can access our diverse range of AI-powered educational services. Our ＄AIEDU CA:
 
+
+
+https://github.com/user-attachments/assets/298138b6-5d6c-40dc-ac0a-ddd440c89820
+
+
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![React](https://img.shields.io/badge/react-18%2B-blue)](https://react.dev/)
