@@ -6,7 +6,11 @@
   </a>
 </div>
 
-A microservice-based AI education platform for children that integrates LLMs, image generation, and speech synthesis to provide personalized storybook creation, intelligent conversational learning, and multimedia content generation.
+An AI-powered personalized children's education platform bridging the gap in children's education across different regions. We provide instant, dynamic adjustments to various content formats of children's learning experiences and interactive creation. Using LLMs, image generation, voice content, and video content generation technologies, we offer personalized storybooks, intelligent conversational learning, and engaging multimedia children's educational content in multiple languages.
+
+We believe in using AI to enhance, not replace, human interaction and creativity. Gamified learning challenges and interactive stories keep children engaged and motivated.
+
+We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overcome globalization barriers in EdTech and incentivize children's engagement in education. Through a unified $AIEDU, global users can access our diverse range of AI-powered educational services. Our ＄AIEDU CA:
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
