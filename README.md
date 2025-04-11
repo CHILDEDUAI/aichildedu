@@ -14,7 +14,8 @@ We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overco
 
 
 
-https://github.com/user-attachments/assets/298138b6-5d6c-40dc-ac0a-ddd440c89820
+https://github.com/user-attachments/assets/efbd5214-c5d4-4f7b-be36-9e2b32ba315c
+
 
 
 
