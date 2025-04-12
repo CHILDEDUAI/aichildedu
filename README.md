@@ -17,6 +17,17 @@ We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overco
 
 https://github.com/user-attachments/assets/66bacc9e-7882-42bb-984d-c224039f5ea5
 
+**AIEDU One-Sentence Video Creation Framework**
+
+You only need to provide a one-sentence topic, and AIEDU can generate a roughly 30-60 second animated video for children. It will support translation of English: dialogue content modification and image changes.
+like：Create an video that AIEDU robot that makes the ROYA start to enjoy learning.
+
+sample video：
+
+
+
+
+https://github.com/user-attachments/assets/f3b0bc0a-fb48-4898-ab03-e7c023e2bcbc
 
 
 
