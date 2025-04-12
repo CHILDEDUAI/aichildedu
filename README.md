@@ -10,7 +10,7 @@ An AI-powered personalized children's education platform bridging the gap in chi
 
 We believe in using AI to enhance, not replace, human interaction and creativity. Gamified learning challenges and interactive stories keep children engaged and motivated.
 
-We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overcome globalization barriers in EdTech and incentivize children's engagement in education. Through a unified $AIEDU, global users can access our diverse range of AI-powered educational services. Our ＄AIEDU CA:
+We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overcome globalization barriers in EdTech and incentivize children's engagement in education. Through a unified $AIEDU, global users can access our diverse range of AI-powered educational services. Our ＄AIEDU CA: `HUFsw6Wsw7ghF5nmeCK4CcUKHnkDBvgY5x2v822xpump`
 
 
 
