@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://aichildedu.xyz/">
-    <img src="https://raw.githubusercontent.com/CHILDEDUAI/aichildedu/refs/heads/main/assets/logo.jpg" margin-top="15px" margin-bottom="15px" width="80%" alt="Logo">
+    ![logo](https://github.com/user-attachments/assets/31145bde-7a80-43a6-9e2b-6e380be1307e)
   </a>
 </div>
 
