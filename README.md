@@ -1,4 +1,4 @@
-# AICHILDEDU
+# EDUMCP
 
 <div align="center">
   <a href="https://aichildedu.xyz/">
@@ -6,30 +6,17 @@
   </a>
 </div>
 
-An AI-powered personalized children's education platform bridging the gap in children's education across different regions. We provide instant, dynamic adjustments to various content formats of children's learning experiences and interactive creation. Using LLMs, image generation, voice content, and video content generation technologies, we offer personalized storybooks, intelligent conversational learning, and engaging multimedia children's educational content in multiple languages.
+EDUMCP, short for Educational Model Context Protocol, is an innovative open platform protocol designed to break down the silo effect currently seen in AI applications within education. Built on the robust Model Context Protocol (MCP), EDUMCP enables seamless interconnection and interoperability among diverse AI models, educational applications, smart hardware, and even teaching content.
 
-We believe in using AI to enhance, not replace, human interaction and creativity. Gamified learning challenges and interactive stories keep children engaged and motivated.
-
-We aim to leverage cryptocurrency and introduce a system token, AIEDU, to overcome globalization barriers in EdTech and incentivize children's engagement in education. Through a unified $AIEDU, global users can access our diverse range of AI-powered educational services. Our ＄AIEDU CA: `HUFsw6Wsw7ghF5nmeCK4CcUKHnkDBvgY5x2v822xpump`
+An AI tutoring system can easily share and understand data and context with a story generation model, an interactive game engine, or a virtual experiment platform. By establishing such a standardized communication bridge, EDUMCP brings unprecedented possibilities to the field of education, enabling various AI tools to work together to provide users with richer, more personalized, and more inspiring learning content and services.
 
 
 
 
-https://github.com/user-attachments/assets/66bacc9e-7882-42bb-984d-c224039f5ea5
+**EDUMCP One-Sentence Video Creation Framework**
 
-**AIEDU One-Sentence Video Creation Framework**
-
-You only need to provide a one-sentence topic, and AIEDU can generate a roughly 30-60 second animated video for children. It will support translation of English: dialogue content modification and image changes.
-like：Create an video that AIEDU robot that makes the ROYA start to enjoy learning.
-
-sample video：
-
-
-
-
-https://github.com/user-attachments/assets/f3b0bc0a-fb48-4898-ab03-e7c023e2bcbc
-
-
+You only need to provide a one-sentence topic, and EDUMCP can generate a roughly 30-60 second animated video for children. It will support translation of English: dialogue content modification and image changes.
+like：Create an video that EDUMCP robot that makes the ROYA start to enjoy learning.
 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
@@ -60,7 +47,7 @@ AICHILDEDU is an innovative educational platform designed specifically for child
 
 ## System Architecture
 
-AICHILDEDU follows a microservice architecture with the following key components:
+EDUMCP follows a microservice architecture with the following key components:
 
 ```
                            ┌─────────────────┐
@@ -92,7 +79,7 @@ AICHILDEDU follows a microservice architecture with the following key components
 
 - **Backend**: Python, FastAPI, Uvicorn
 - **Databases**: PostgreSQL, MongoDB, Redis
-- **AI & ML**: LangChain, AIEDU GPT models, TensorFlow, PyTorch, Transformers
+- **AI & ML**: LangChain, EDUMCP GPT models, TensorFlow, PyTorch, Transformers
 - **Storage**: MinIO (Object Storage)
 - **Search**: Elasticsearch
 - **Containerization**: Docker, Docker Compose
@@ -119,7 +106,7 @@ AICHILDEDU follows a microservice architecture with the following key components
    POSTGRES_USER=postgres
    POSTGRES_PASSWORD=postgres
    MONGODB_URI=mongodb://mongodb:27017/
-   MONGODB_DB=aiedu
+   MONGODB_DB=EDUMCP
    
    # Authentication
    SECRET_KEY=your_secret_key_change_in_production
